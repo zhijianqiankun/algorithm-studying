@@ -1,0 +1,11 @@
+class Solution {
+public:
+    int hammingWeight(uint32_t n) {//输入32位二进制数，获得其中1的数量
+        int res=0;
+        while(n>0){
+            n&=(n-1);//例子：01110100，减一01110011，两者相与01110000，消除了最末尾的1
+            res++;
+        }
+        return res;
+    }
+};
